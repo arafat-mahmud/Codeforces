@@ -1,0 +1,19 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    
+    arr = list(map(int, input().split()))
+    
+    sum_val = 0
+    cnt_1 = 0
+    
+    for x in arr:
+        sum_val += x
+        if x == 1:
+            cnt_1 += 1
+    
+    if sum_val >= cnt_1 + n and n > 1:
+        print("YES")
+    else:
+        print("NO")
