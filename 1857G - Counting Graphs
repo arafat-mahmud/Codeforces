@@ -1,5 +1,5 @@
 MOD = 10**9 + 7
-N = 210
+N = 1
 
 class ModInt:
     def __init__(self, value):
