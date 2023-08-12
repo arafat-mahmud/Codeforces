@@ -68,7 +68,7 @@ def yo(n, k):
         return dp[n][k]
     vis[n][k] = True
     ans = ModInt(0)
-    
+
     for s in range(1, n + 1):
         ans += (comb[n - 1][s - 1] * C[s]) * yo(n - s, k - 1)
     dp[n][k] = ans
@@ -92,3 +92,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+    
