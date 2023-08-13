@@ -1,0 +1,21 @@
+def main():
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        sorted_flag = True
+        min_num = 10**9 + 7
+        prev = int(input())
+        
+        for _ in range(1, n):
+            x = int(input())
+            if prev <= x:
+                num = 1 + (x - prev) // 2
+                min_num = min(num, min_num)
+            else:
+                sorted_flag = False
+            prev = x
+        
+        print(min_num if sorted_flag else 0)
+
+if __name__ == "__main__":
+    main()
