@@ -1,11 +1,8 @@
 def main():
+    
     t = int(input())
-    tcase = 0
 
-    while t > 0:
-        tcase += 1
-        t -= 1
-
+    for tcase in range(1, t + 1):
         n = int(input())
         a = list(map(int, input().split()))
 
