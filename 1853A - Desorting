@@ -2,6 +2,7 @@ def main():
 
     t = int(input())
     for _ in range(t):
+        
         n = int(input())
         sorted_flag = True
         min_num = 10**9 + 7
@@ -12,6 +13,7 @@ def main():
             if prev <= x:
                 num = 1 + (x - prev) // 2
                 min_num = min(num, min_num)
+
             else:
                 sorted_flag = False
             prev = x
