@@ -1,5 +1,5 @@
 def main():
-    
+
     t = int(input())
 
     for tcase in range(1, t + 1):
@@ -12,6 +12,7 @@ def main():
                 now = a[i + 1] - a[i]
                 ans = min(ans, now // 2 + 1)
             print(ans)
+            
         else:
             print(0)
 
