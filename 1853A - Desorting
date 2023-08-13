@@ -1,7 +1,7 @@
 def main():
 
     t = int(input())
-    
+
     for _ in range(t):
         n = int(input())
         sorted_flag = True
@@ -20,3 +20,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
