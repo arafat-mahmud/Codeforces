@@ -7,7 +7,7 @@ def main():
         a = list(map(int, input().split()))
 
         if sorted(a) == a:
-            ans = float('infinity')
+            ans = float('inf')
             for i in range(n - 1):
                 now = a[i + 1] - a[i]
                 ans = min(ans, now // 2 + 1)
