@@ -25,10 +25,9 @@ def solve(a):
     else:
         for i in range(len(a) - 2, -1, -1):
             operations.append(Operation(i, i + 1))
-            
+
 
     return f"{len(operations)}\n" + "\n".join(f"{operation.to_index + 1} {operation.from_index + 1}" for operation in operations)
-
 
 
 def main():
