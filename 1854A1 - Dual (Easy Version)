@@ -6,7 +6,6 @@ def solve(a):
             self.from_index = from_index
 
 
-    
     operations = []
     positive_index = next((i for i, val in enumerate(a) if val > 0), None)
     
