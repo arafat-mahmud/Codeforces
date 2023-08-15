@@ -1,0 +1,28 @@
+def solve(a):
+    n = len(a)
+    operations = []
+
+    if any(val > 0 for val in a):
+        positive_index = a.index(max(val for val in a if val > 0))
+
+        for i in range(n):
+            operations.append(f"{positive_index + 1} {i + 1}")
+
+        for i in range(1, n):
+            operations.append(f"{i + 1} {i}")
+
+    else:
+        for i in range(n - 2, -1, -1):
+            operations.append(f"{i + 1} {i + 2}")
+
+    return f"{len(operations)}\n" + "\n".join(operations)
+
+def main():
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        a = list(map(int, input().split()))
+        print(solve(a))
+
+if __name__ == "__main__":
+    main()
