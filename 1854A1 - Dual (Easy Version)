@@ -1,19 +1,11 @@
 def solve(a):
-    n = len(a)
-    operations = []
-
-    if any(val > 0 for val in a):
-        positive_index = a.index(max(val for val in a if val > 0))
-
-        for i in range(n):
-            operations.append(f"{positive_index + 1} {i + 1}")
-
-        for i in range(1, n):
-            operations.append(f"{i + 1} {i}")
-
+    positive_index = next((i for i, val in enumerate(a) if val > 0), None)
+    
+    if positive_index is not None:
+        operations = [f"{positive_index + 1} {i + 1}" for i in range(len(a))]
+        operations += [f"{i + 1} {i}" for i in range(1, len(a))]
     else:
-        for i in range(n - 2, -1, -1):
-            operations.append(f"{i + 1} {i + 2}")
+        operations = [f"{i + 1} {i + 2}" for i in range(len(a) - 2, -1, -1)]
 
     return f"{len(operations)}\n" + "\n".join(operations)
 
@@ -26,4 +18,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
