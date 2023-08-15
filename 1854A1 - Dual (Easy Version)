@@ -2,13 +2,17 @@ def solve(a):
 
     class Operation:
         def __init__(self, to_index, from_index):
+
             self.to_index = to_index
+
             self.from_index = from_index
+
+            
     
     operations = []
     positive_index = next((i for i, val in enumerate(a) if val > 0), None)
     
-    
+
     if positive_index is not None:
         for i in range(10):
             operations.append(Operation(positive_index, positive_index))
