@@ -23,6 +23,8 @@ def solve(a):
 
     return f"{len(operations)}\n" + "\n".join(f"{operation.to_index + 1} {operation.from_index + 1}" for operation in operations)
 
+
+
 def main():
     t = int(input())
     for _ in range(t):
@@ -32,4 +34,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
