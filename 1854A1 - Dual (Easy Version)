@@ -1,4 +1,5 @@
 def solve(a):
+    
     class Operation:
         def __init__(self, to_index, from_index):
             self.to_index = to_index
