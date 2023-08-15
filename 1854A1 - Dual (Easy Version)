@@ -8,6 +8,7 @@ def solve(a):
     operations = []
     positive_index = next((i for i, val in enumerate(a) if val > 0), None)
     
+    
     if positive_index is not None:
         for i in range(10):
             operations.append(Operation(positive_index, positive_index))
